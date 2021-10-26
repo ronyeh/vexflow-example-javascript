@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- 
+    To view this file, open it from the local filesystem with your web browser.
+    Or, start a webserver with `npx serve`.
+    Then, navigate to http://localhost:5000/
+-->
+<html>
+    <head>
+        <style>
+            body {
+                margin: 30px;
+                font: 18px "Myriad Pro", Helvetica, Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            This demo loads <b><code>vexflow.js</code></b
+            >, which includes all music engraving fonts.
+        </p>
+        <h2>Bravura</h2>
+        <div id="outputBravura"></div>
+        <h2>Gonville</h2>
+        <div id="outputGonville"></div>
+        <h2>Petaluma</h2>
+        <div id="outputPetaluma"></div>
+        <!--
+            Instead of pointing directly to a file in your node_modules/ folder, you can copy it
+            to your web server, or use a bundler (e.g., esbuild, WebPack, Rollup, Parcel).
+            But this is just a demo! :-)
+        -->
+        <script src="../node_modules/vexflow/build/cjs/vexflow.js"></script>
+        <script>
+            {
+                // VexFlow defaults to the Bravura music engraving font, so the next line isn't necessary.
+                Vex.Flow.setMusicFont("Bravura");
+
+                const factory = new Vex.Flow.Factory({
+                    renderer: { elementId: "outputBravura", width: 500, height: 130 },
+                });
+                const score = factory.EasyScore();
+                factory
+                    .System()
+                    .addStave({
+                        voices: [score.voice(score.notes("C#5/q, B4, A4, G#4", { stem: "up" })), score.voice(score.notes("C#4/h, C#4", { stem: "down" }))],
+                    })
+                    .addClef("treble")
+                    .addTimeSignature("4/4");
+                factory.draw();
+            }
+
+            {
+                // Change to a different music font.
+                Vex.Flow.setMusicFont("Gonville");
+
+                const factory = new Vex.Flow.Factory({
+                    renderer: { elementId: "outputGonville", width: 500, height: 130 },
+                });
+                const score = factory.EasyScore();
+                factory
+                    .System()
+                    .addStave({
+                        voices: [score.voice(score.notes("C#5/q, B4, A4, G#4", { stem: "up" })), score.voice(score.notes("C#4/h, C#4", { stem: "down" }))],
+                    })
+                    .addClef("treble")
+                    .addTimeSignature("4/4");
+                factory.draw();
+            }
+
+            {
+                Vex.Flow.setMusicFont("Petaluma");
+
+                const factory = new Vex.Flow.Factory({
+                    renderer: { elementId: "outputPetaluma", width: 500, height: 130 },
+                });
+                const score = factory.EasyScore();
+                factory
+                    .System()
+                    .addStave({
+                        voices: [score.voice(score.notes("C#5/q, B4, A4, G#4", { stem: "up" })), score.voice(score.notes("C#4/h, C#4", { stem: "down" }))],
+                    })
+                    .addClef("treble")
+                    .addTimeSignature("4/4");
+                factory.draw();
+            }
+        </script>
+    </body>
+</html>

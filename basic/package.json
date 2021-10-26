@@ -1,0 +1,27 @@
+{
+    "name": "vexflow-example-javascript",
+    "version": "1.0.0",
+    "type": "module",
+    "dependencies": {
+        "jsdom": "^18.0.1",
+        "jspdf": "^2.4.0",
+        "svg2pdf.js": "^2.2.0",
+        "vexflow": "https://vexflow-demo.surge.sh/vexflow-beta-2021-12-07.tgz"
+    },
+    "scripts": {
+        "start": "echo Open individual HTML files to see the demos.",
+        "pdf": "node src/pdf.js && echo Open score.pdf to see the output.",
+        "customcontext": "node src/customcontext.js",
+        "module": "echo 'Navigate to http://localhost:8080/src/module.html' && npx http-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ronyeh/vexflow-example-javascript.git"
+    },
+    "author": "Ron B. Yeh",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ronyeh/vexflow-example-javascript/issues"
+    },
+    "homepage": "https://github.com/ronyeh/vexflow-example-javascript#readme"
+}

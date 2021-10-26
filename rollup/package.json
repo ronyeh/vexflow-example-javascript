@@ -1,0 +1,17 @@
+{
+    "scripts": {
+        "start": "rollup --config",
+        "watch": "rollup --config --watch"
+    },
+    "dependencies": {
+        "vexflow": "https://vexflow-demo.surge.sh/vexflow-beta-2021-12-07.tgz"
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^21.0.1",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^13.0.6",
+        "jsdom": "^18.1.0",
+        "rollup": "^2.60.0",
+        "rollup-plugin-terser": "^7.0.2"
+    }
+}

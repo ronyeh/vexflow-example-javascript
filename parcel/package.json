@@ -1,0 +1,29 @@
+{
+    "name": "vexflow-example-javascript",
+    "version": "1.0.0",
+    "description": "",
+    "targets": {
+        "default": {
+            "source": "src/index.html"
+        }
+    },
+    "type": "module",
+    "devDependencies": {
+        "parcel": "^2.0.1",
+        "vexflow": "https://vexflow-demo.surge.sh/vexflow-beta-2021-12-07.tgz"
+    },
+    "scripts": {
+        "start": "parcel --dist-dir ./build --no-source-maps",
+        "build": "parcel build --dist-dir ./build --no-source-maps && cd build && npx http-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ronyeh/vexflow-example-javascript.git"
+    },
+    "author": "Ron B. Yeh",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ronyeh/vexflow-example-javascript/issues"
+    },
+    "homepage": "https://github.com/ronyeh/vexflow-example-javascript#readme"
+}

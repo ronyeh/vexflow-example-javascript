@@ -1,0 +1,14 @@
+basic/node_modules/
+
+esbuild/build/
+esbuild/node_modules/
+
+parcel/build/
+parcel/node_modules/
+.parcel-cache
+
+rollup/build/
+rollup/node_modules/
+
+webpack/build/
+webpack/node_modules/

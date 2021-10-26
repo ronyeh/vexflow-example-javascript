@@ -1,0 +1,13 @@
+{
+    "type": "module",
+    "scripts": {
+        "start": "webpack --config ./webpack.config.cjs"
+    },
+    "dependencies": {
+        "vexflow": "https://vexflow-demo.surge.sh/vexflow-beta-2021-12-07.tgz"
+    },
+    "devDependencies": {
+        "webpack": "^5.64.1",
+        "webpack-cli": "^4.9.1"
+    }
+}

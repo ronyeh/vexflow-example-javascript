@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 30px;
+                font: 18px "Myriad Pro", Helvetica, Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This demo only works with a web server, because we use: <pre>&lt;script type="module" src="module.js"&gt;&lt;script&gt;</pre></pre></p>
+        <p>To view the demo, run `npx http-server`. Then, navigate to <a href="http://localhost:8080/src/module.html">http://localhost:8080/src/module.html</a></p>
+        <script type="module">
+            import Vex from "../node_modules/vexflow/build/esm/entry/vexflow.js";
+
+            const app = {
+                containerID: "vex-container",
+            };
+
+            function addContainer() {
+                const div = document.createElement("div");
+                div.id = app.containerID;
+                document.body.appendChild(div);
+                return div;
+            }
+
+            function addScoreToContainer(parent) {
+                const { Factory } = Vex.Flow;
+
+                const factory = new Factory({ renderer: { elementId: app.containerID } });
+                const score = factory.EasyScore();
+                const system = factory.System();
+
+                system
+                    .addStave({
+                        voices: [
+                            // two voices in one stave.
+                            score.voice(score.notes("C#5/q, B4, A4, G#4", { stem: "up" })),
+                            score.voice(score.notes("C#4/h, C#4", { stem: "down" })),
+                        ],
+                    })
+                    .addClef("treble")
+                    .addTimeSignature("4/4");
+
+                factory.draw();
+            }
+
+            const parent = addContainer();
+            addScoreToContainer(parent);
+
+        </script>
+    </body>
+</html>
