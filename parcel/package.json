@@ -10,7 +10,7 @@
     "type": "module",
     "devDependencies": {
         "parcel": "^2.0.1",
-        "vexflow": "https://vexflow-demo.surge.sh/vexflow-beta-2021-12-07.tgz"
+        "vexflow": "https://vexflow-demo.surge.sh/4.0.0-beta.tgz"
     },
     "scripts": {
         "start": "parcel --dist-dir ./build --no-source-maps",
