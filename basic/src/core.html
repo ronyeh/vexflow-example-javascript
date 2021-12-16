@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- 
-    To view this file, open it from the local filesystem with your web browser.
-    Or, start a webserver with `npx serve`. Then, navigate to http://localhost:5000/
+    Start a webserver with `npx http-server`. Then, navigate to http://127.0.0.1:8080/src/core.html
 -->
 <html>
     <head>
@@ -16,7 +15,7 @@
         <div id="output"></div>
         <!--
             vexflow-core.js loads no music fonts by default.
-            You'll need to explicitly load a font by calling async Vex.Flow.setMusicFont(fontName).
+            You'll need to explicitly load a font by calling async Vex.Flow.fetchMusicFont(fontName).
         -->
         <script src="../node_modules/vexflow/build/cjs/vexflow-core.js"></script>
         <script>
@@ -31,9 +30,9 @@
             }
 
             // This line is required. Otherwise, the music font stack is empty.
-            Vex.Flow.setMusicFont("Petaluma").then(() => {
-                // Petaluma Font is loaded!
-                loadScript("core.js");
+            Vex.Flow.fetchMusicFont("Petaluma").then(() => {
+                Vex.Flow.setMusicFont("Petaluma");
+                loadScript("app.js");
             });
         </script>
     </body>

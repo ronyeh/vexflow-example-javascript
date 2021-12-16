@@ -9,7 +9,7 @@ function normalizeName(name) {
 }
 
 module.exports = {
-    mode: "development",
+    mode: "production",
     context: __dirname,
     entry: {
         app: "./src/app.js",

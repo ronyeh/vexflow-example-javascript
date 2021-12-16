@@ -1,9 +1,10 @@
 // Run `npm start`
 
-import { Vex } from "vexflow";
+// Include all three music engraving fonts.
+// import { Vex } from "vexflow"; // 772 KiB
 
-// VexFlow defaults to the Bravura music engraving font, so the next line isn't necessary.
-Vex.Flow.setMusicFont("Bravura");
+// Include only the Petaluma Music Font
+import { Vex } from "vexflow/petaluma"; // 461 KiB
 
 const factory = new Vex.Flow.Factory({
     renderer: { elementId: "output", width: 500, height: 130 },

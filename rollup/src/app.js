@@ -1,5 +1,5 @@
 // import { Flow, Renderer, Stave } from "vexflow";
-import { Flow, Renderer, Stave } from "vexflow/core-with-gonville";
+import { Flow, Renderer, Stave } from "vexflow/gonville";
 const { JSDOM } = require("jsdom");
 
 const dom = new JSDOM('<!DOCTYPE html><html><body><div id="vf"></div><body></html>');

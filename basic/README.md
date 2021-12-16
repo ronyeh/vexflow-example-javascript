@@ -2,9 +2,9 @@
 
 `all.html` loads the vexflow.js library which includes all music fonts.
 
-`core-with-\*.html` load a vexflow-core-with-\*.js bundle that includes a single font. The other music fonts are loaded dynamically.
+`xxxx-only.html` load a vexflow-xxxx.js bundle that includes a single font.
 
-`core.html` bundles zero music fonts. Every font is loaded dynamically when you call ` await Flow.setMusicFont(...fontNames)`;
+`core.html` bundles zero music fonts. Fonts are loaded dynamically when you call ` await Flow.fetchMusicFont(fontName); Flow.setMusicFont(fontName)`;
 
 `module.html` imports the ES module entry file vexflow.js, which in turn imports its dependencies. If you open the developer console's network tab, you'll see all the different ES module files that are loaded.
 
