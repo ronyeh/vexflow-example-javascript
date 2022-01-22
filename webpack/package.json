@@ -4,7 +4,7 @@
         "start": "webpack --config ./webpack.config.cjs"
     },
     "dependencies": {
-        "vexflow": "https://vexflow-demo.surge.sh/4.0.0-beta-2021-12-24.tgz"
+        "vexflow": "https://vexflow-demo.surge.sh/vexflow-4.0-beta-2022-01-22.tgz"
     },
     "devDependencies": {
         "webpack": "^5.64.1",

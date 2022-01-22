@@ -21,3 +21,5 @@ factory
     .addClef("treble")
     .addTimeSignature("4/4");
 factory.draw();
+
+console.log(Vex.Flow.BUILD);
