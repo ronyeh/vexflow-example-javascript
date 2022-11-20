@@ -1,9 +1,9 @@
 // An example of how to use VexFlow in node.
 // Run directly: `node pdf.js` saves a PDF in `score.pdf`.
 
-// import { Vex, Stave, StaveNote, Formatter } from "vexflow";
+import { Vex, Stave, StaveNote, Formatter } from "vexflow";
 // import Vex, { Stave, StaveNote, Formatter } from "vexflow/gonville";
-import Vex, { Stave, StaveNote, Formatter } from "vexflow/petaluma";
+// import Vex, { Stave, StaveNote, Formatter } from "vexflow/petaluma";
 
 import { JSDOM } from "jsdom";
 import { jsPDF } from "jspdf";
