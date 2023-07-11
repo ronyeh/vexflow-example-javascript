@@ -11,7 +11,8 @@
         "jsdom": "^18.0.1",
         "jspdf": "^2.4.0",
         "svg2pdf.js": "^2.2.0",
-        "vexflow": "^4.1.0-beta.0"
+        "vexflow": "^4.2.2",
+        "vxflw-early-access": "^5.0.0-alpha.0"
     },
     "scripts": {
         "start": "esbuild src/app.js --bundle --outfile=build/app.js && npx http-server",

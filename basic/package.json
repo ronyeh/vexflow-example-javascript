@@ -6,7 +6,8 @@
         "jsdom": "^18.0.1",
         "jspdf": "^2.4.0",
         "svg2pdf.js": "^2.2.0",
-        "vexflow": "https://vexflow-demo.surge.sh/vex4_2022_03_20.tgz"
+        "vexflow": "^4.2.2",
+        "vxflw-early-access": "^5.0.0-alpha.0"
     },
     "scripts": {
         "start": "echo Open individual HTML files to see the demos.",

@@ -1,9 +1,10 @@
 // Run `npm start` to use esbuild to create an app bundle in the build/ directory.
 // This is a portable bundle that includes VexFlow, so you can move app.js to a different directory and it will still work.
 
-import { Vex } from "vexflow";
+// import { Vex } from "vexflow";
 // import { Vex } from "vexflow/petaluma";
 import { add, subtract } from "./utils";
+import { Vex } from "vxflw-early-access";
 
 // VexFlow defaults to the Bravura music engraving font, so the next line isn't necessary.
 // Vex.Flow.setMusicFont("Bravura");
